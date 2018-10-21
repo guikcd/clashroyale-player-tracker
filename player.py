@@ -63,7 +63,7 @@ while 1:
     
         logging.info("Writing data to influxdb")
         logging.info(json_body)
-        client.write_points(json_body)
+        client.write_points([json_body])
 
         logging.info("Closing influxdb connection")
         client.close()
