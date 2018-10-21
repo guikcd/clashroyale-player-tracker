@@ -12,8 +12,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY players.py /srv/
+COPY player.py /srv/
 
 WORKDIR /srv
 
-CMD python /srv/players.py
+CMD python /srv/player.py
