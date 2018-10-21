@@ -56,6 +56,7 @@ while 1:
                 "tournamentBattleCount": int(player['tournamentBattleCount']),
                 "donations": int(player['donations']),
                 "donationsReceived": int(player['donationsReceived']),
+                "totalDonations": int(player['totalDonations']),
                 "warDayWins": int(player['warDayWins']),
                 "clanCardsCollected": int(player['clanCardsCollected'])
             }
