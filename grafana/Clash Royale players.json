@@ -58,13 +58,13 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1540122374594,
+  "iteration": 1540581581702,
   "links": [],
   "panels": [
     {
-      "content": "<a href=\"https://clashroyale.com/\"><img src=\"https://ucc2ef2e9fde7f33fb18805ba579.previews.dropboxusercontent.com/p/thumb/AANv21wpTB6NvJhWw2rnPMImXkaZQ2YYp6BGLhsYC0zp4MnouVSK-qwQ3SAYKw26uj9QHHJvbU2S07EdYgw0SPhPHOEIJ_0QJesmpAiEuUz5w3PHjeKdA27BCr1Ni7RX2hD4LRWZCzgmsDG8b_TTPKO3yi3R9Mzp8z7aBOeVSRoUzruifCQe7Q7x98IYDX5--0QcegOyNPCJKWFq_FKlccIpERPv9roZtMkpWJ_AoWMznQ/p.jpeg?size=2048x1536&size_mode=3\" height=300></a>",
+      "content": "<a href=\"https://github.com/guikcd/clashroyale-player-tracker\">See how metrics are collected</a>",
       "gridPos": {
-        "h": 9,
+        "h": 2,
         "w": 4,
         "x": 0,
         "y": 0
@@ -1032,7 +1032,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 8
       },
       "id": 11,
       "panels": [],
@@ -1051,7 +1051,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 9
       },
       "id": 2,
       "legend": {
@@ -1079,13 +1079,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "trophies",
+          "alias": "[[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1175,7 +1181,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 10
+        "y": 9
       },
       "id": 18,
       "legend": {
@@ -1202,13 +1208,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "wins",
+          "alias": "[[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1298,7 +1310,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 18
       },
       "id": 9,
       "legend": {
@@ -1325,13 +1337,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "wins",
+          "alias": "wins [[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1368,13 +1386,19 @@
           ]
         },
         {
-          "alias": "losses",
+          "alias": "losses [[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1463,7 +1487,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 19
+        "y": 18
       },
       "id": 17,
       "legend": {
@@ -1490,13 +1514,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "wins",
+          "alias": "[[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1586,7 +1616,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 27
       },
       "id": 20,
       "legend": {
@@ -1657,13 +1687,19 @@
           ]
         },
         {
-          "alias": "donations",
+          "alias": "donations [[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1700,13 +1736,19 @@
           ]
         },
         {
-          "alias": "donations received",
+          "alias": "donations received [[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1795,7 +1837,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 28
+        "y": 27
       },
       "id": 24,
       "legend": {
@@ -1822,13 +1864,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "total",
+          "alias": "[[tag_player_name]]",
           "groupBy": [
             {
               "params": [
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -1917,9 +1965,9 @@
         "current": {},
         "datasource": "${DS_CLASH_ROYALE}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": null,
-        "multi": false,
+        "multi": true,
         "name": "player",
         "options": [],
         "query": "SHOW SERIES",
@@ -1957,7 +2005,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -1988,5 +2036,5 @@
   "timezone": "",
   "title": "Clash Royale players",
   "uid": "ezy6lpbik",
-  "version": 21
+  "version": 26
 }
