@@ -58,16 +58,29 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1540581581702,
+  "iteration": 1540581581721,
   "links": [],
   "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 31,
+      "panels": [],
+      "title": "Overview",
+      "type": "row"
+    },
     {
       "content": "<a href=\"https://github.com/guikcd/clashroyale-player-tracker\">See how metrics are collected</a>",
       "gridPos": {
         "h": 2,
         "w": 4,
         "x": 0,
-        "y": 0
+        "y": 1
       },
       "id": 27,
       "links": [
@@ -104,7 +117,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 0
+        "y": 1
       },
       "id": 6,
       "interval": null,
@@ -231,7 +244,7 @@
         "h": 2,
         "w": 2,
         "x": 6,
-        "y": 0
+        "y": 1
       },
       "id": 14,
       "interval": null,
@@ -348,7 +361,7 @@
         "h": 2,
         "w": 2,
         "x": 8,
-        "y": 0
+        "y": 1
       },
       "id": 21,
       "interval": null,
@@ -465,7 +478,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 2
+        "y": 3
       },
       "id": 8,
       "interval": null,
@@ -582,7 +595,7 @@
         "h": 2,
         "w": 2,
         "x": 6,
-        "y": 2
+        "y": 3
       },
       "id": 15,
       "interval": null,
@@ -698,7 +711,7 @@
         "h": 2,
         "w": 2,
         "x": 4,
-        "y": 4
+        "y": 5
       },
       "id": 19,
       "interval": null,
@@ -815,7 +828,7 @@
         "h": 2,
         "w": 2,
         "x": 6,
-        "y": 4
+        "y": 5
       },
       "id": 22,
       "interval": null,
@@ -932,7 +945,7 @@
         "h": 2,
         "w": 2,
         "x": 6,
-        "y": 6
+        "y": 7
       },
       "id": 23,
       "interval": null,
@@ -1032,11 +1045,11 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 9
       },
       "id": 11,
       "panels": [],
-      "title": "details",
+      "title": "Details",
       "type": "row"
     },
     {
@@ -1051,7 +1064,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 10
       },
       "id": 2,
       "legend": {
@@ -1181,7 +1194,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 10
       },
       "id": 18,
       "legend": {
@@ -1310,7 +1323,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 18
+        "y": 19
       },
       "id": 9,
       "legend": {
@@ -1487,7 +1500,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 18
+        "y": 19
       },
       "id": 17,
       "legend": {
@@ -1616,7 +1629,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 27
+        "y": 28
       },
       "id": 20,
       "legend": {
@@ -1837,7 +1850,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 27
+        "y": 28
       },
       "id": 24,
       "legend": {
@@ -1918,6 +1931,275 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "War wins",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 37
+      },
+      "id": 33,
+      "panels": [],
+      "title": "Challenges",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_CLASH_ROYALE}",
+      "fill": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 38
+      },
+      "id": 28,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 3,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_player_name]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "none"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "players",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "challengeMaxWins"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "player_name",
+              "operator": "=~",
+              "value": "/^$player$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Challenges wins",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_CLASH_ROYALE}",
+      "fill": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 38
+      },
+      "id": 29,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 3,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_player_name]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "none"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "players",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "challengeCardsWon"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "player_name",
+              "operator": "=~",
+              "value": "/^$player$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "cards won",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2036,5 +2318,5 @@
   "timezone": "",
   "title": "Clash Royale players",
   "uid": "ezy6lpbik",
-  "version": 26
+  "version": 28
 }
