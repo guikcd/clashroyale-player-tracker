@@ -32,6 +32,7 @@ while 1:
     
         logging.info('Connecting to {}:{}/{}'.format(os.environ['INFLUXDB_HOST'], os.environ['INFLUXDB_PORT'], os.environ['INFLUXDB_DATABASE']))
         client = InfluxDBClient(os.environ['INFLUXDB_HOST'], os.environ['INFLUXDB_PORT'], os.environ['INFLUXDB_LOGIN'], os.environ['INFLUXDB_PASSWORD'], os.environ['INFLUXDB_DATABASE'])
+        client.create_database(os.environ['INFLUXDB_DATABASE'])
 
         current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
         player = request.json()

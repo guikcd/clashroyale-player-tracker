@@ -1,0 +1,116 @@
+version: '3'
+volumes:
+  grafana:
+  grafana_conf:
+  influxdb:
+
+services:
+  influxdb:
+    container_name: influxdb
+    image: influxdb:1.5
+    volumes:
+      - influxdb:/var/lib/influxdb
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:5.3.0
+    volumes:
+      - grafana:/var/lib/grafana
+      - grafana_conf:/etc/grafana
+    ports:
+       - 3000:3000
+  donations:
+    container_name: donations
+    image: donations:0.1
+    restart: on-failure
+    environment:
+      CLAN_TAG: CP28G8V
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-gui:
+    container_name: player-gui
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: 2G00222J
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-axael:
+    container_name: player-axael
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: 9YCP20U9
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-axaeltv:
+    container_name: player-axaeltv
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: CJ2U0VG8
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-clement:
+    container_name: player-clement
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: 2CG99UV8L
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-jerome:
+    container_name: player-jerome
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: 2G8U8RPQG
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-johan:
+    container_name: player-johan
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: 2QG9RUGCU
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
+  player-john:
+    container_name: player-john
+    image: guidelacour/clashroyale-player-tracker
+    restart: on-failure
+    environment:
+      PLAYER_TAG: C0GP29U
+      CR_API_TOKEN: ${CR_API_TOKEN}
+      INFLUXDB_HOST: influxdb
+      INFLUXDB_PORT: 8086
+      INFLUXDB_LOGIN: root
+      INFLUXDB_PASSWORD: root
+      INFLUXDB_DATABASE: clashroyale_stats
