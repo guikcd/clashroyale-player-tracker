@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1540581581735,
+  "iteration": 1540581581748,
   "links": [],
   "panels": [
     {
@@ -1068,15 +1068,15 @@
       },
       "id": 2,
       "legend": {
-        "alignAsTable": true,
+        "alignAsTable": false,
         "avg": false,
         "current": false,
-        "max": true,
-        "min": true,
+        "max": false,
+        "min": false,
         "rightSide": false,
         "show": true,
         "total": false,
-        "values": true
+        "values": false
       },
       "lines": true,
       "linewidth": 3,
@@ -1092,7 +1092,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "[[tag_player_name]]",
+          "alias": "trophies [[tag_player_name]]",
           "groupBy": [
             {
               "params": [
@@ -1123,6 +1123,55 @@
               {
                 "params": [
                   "trophies"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "player_name",
+              "operator": "=~",
+              "value": "/^$player$/"
+            }
+          ]
+        },
+        {
+          "alias": "best trophies [[tag_player_name]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "player_name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "none"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "players",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "bestTrophies"
                 ],
                 "type": "field"
               },
@@ -2470,5 +2519,5 @@
   "timezone": "",
   "title": "Clash Royale players",
   "uid": "ezy6lpbik",
-  "version": 30
+  "version": 31
 }
