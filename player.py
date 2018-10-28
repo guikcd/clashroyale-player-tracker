@@ -7,6 +7,7 @@ import logging
 
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
 
+USER_AGENT = "player.py/0.1 (https://github.com/guikcd/clashroyale-player-tracker)"
 ENV_VARS = ['INFLUXDB_HOST', 'INFLUXDB_PORT', 'INFLUXDB_LOGIN', 'INFLUXDB_PASSWORD', 'INFLUXDB_DATABASE', 'CR_API_TOKEN', 'PLAYER_TAG']
 
 def _required_vars():
@@ -25,6 +26,7 @@ while 1:
     headers = {
             "Accept": "application/json",
             "Authorization": "Bearer {}".format(os.environ['CR_API_TOKEN']),
+            'User-Agent': USER_AGENT,
             }
     request = requests.get('https://api.clashroyale.com/v1/players/%23{}'.format(os.environ['PLAYER_TAG']), headers=headers)
     
