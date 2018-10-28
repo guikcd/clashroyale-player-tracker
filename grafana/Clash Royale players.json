@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1540727533225,
+  "iteration": 1540733877616,
   "links": [],
   "panels": [
     {
@@ -1209,7 +1209,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "wins [[tag_player_name]]",
+          "alias": "[[tag_player_name]]",
           "groupBy": [
             {
               "params": [
@@ -2685,6 +2685,7 @@
       }
     }
   ],
+  "refresh": false,
   "schemaVersion": 16,
   "style": "dark",
   "tags": [],
@@ -2735,7 +2736,7 @@
     ]
   },
   "time": {
-    "from": "now-24h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -2766,5 +2767,5 @@
   "timezone": "",
   "title": "Clash Royale players",
   "uid": "ezy6lpbik",
-  "version": 34
+  "version": 35
 }
